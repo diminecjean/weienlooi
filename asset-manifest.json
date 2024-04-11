@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/weienlooi/static/css/main.ceb51a4d.css",
-    "main.js": "/weienlooi/static/js/main.6385759e.js",
+    "main.css": "/weienlooi/static/css/main.1064cdf6.css",
+    "main.js": "/weienlooi/static/js/main.bf121ad4.js",
     "static/js/792.a56becde.chunk.js": "/weienlooi/static/js/792.a56becde.chunk.js",
     "static/js/592.83033f49.chunk.js": "/weienlooi/static/js/592.83033f49.chunk.js",
     "index.html": "/weienlooi/index.html",
-    "main.ceb51a4d.css.map": "/weienlooi/static/css/main.ceb51a4d.css.map",
-    "main.6385759e.js.map": "/weienlooi/static/js/main.6385759e.js.map",
+    "main.1064cdf6.css.map": "/weienlooi/static/css/main.1064cdf6.css.map",
+    "main.bf121ad4.js.map": "/weienlooi/static/js/main.bf121ad4.js.map",
     "792.a56becde.chunk.js.map": "/weienlooi/static/js/792.a56becde.chunk.js.map",
     "592.83033f49.chunk.js.map": "/weienlooi/static/js/592.83033f49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceb51a4d.css",
-    "static/js/main.6385759e.js"
+    "static/css/main.1064cdf6.css",
+    "static/js/main.bf121ad4.js"
   ]
 }
