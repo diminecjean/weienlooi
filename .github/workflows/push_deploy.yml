@@ -30,8 +30,9 @@ jobs:
         run: yarn tsc
       - name: Prettier check
         run: yarn prettier --ignore-unknown --no-error-on-unmatched-pattern --color --check .
-      - name: Setup GitHub account identity
+      - name: Setup GitHub account email
         run: git config --global user.email "looi.weien02@student.usm.my"
+      - name: Setup GitHub account username
         run: git config --global user.name "diminecjean"
       - name: Build and Deploy
         run: yarn deploy
