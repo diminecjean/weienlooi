@@ -46,6 +46,7 @@ const ImageModal = ({
       <img
         className="max-w-xl max-h-80 md:max-w-3xl md:max-h-96 rounded-full shadow-2xl"
         src="https://scontent.fkul15-1.fna.fbcdn.net/v/t39.30808-6/361335771_2060895927621943_5044660452564970401_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=t_UMT6mXSxEAb5KjTlv&_nc_ht=scontent.fkul15-1.fna&oh=00_AfAM6dX4ip1FnmPWg20CnU6KUmUjFOEbmyea5aOw80DfbA&oe=66207149"
+        alt="Profile"
       />
     </div>
   );
@@ -66,10 +67,12 @@ export default function LIProfileCard() {
             onClick={() => setOpenImage(true)}
             className="hover:cursor-pointer absolute z-40 rounded-full top-20 left-8 h-40 w-40 object-cover border-white border-4"
             src="https://scontent.fkul15-1.fna.fbcdn.net/v/t39.30808-6/361335771_2060895927621943_5044660452564970401_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=t_UMT6mXSxEAb5KjTlv&_nc_ht=scontent.fkul15-1.fna&oh=00_AfAM6dX4ip1FnmPWg20CnU6KUmUjFOEbmyea5aOw80DfbA&oe=66207149"
+            alt="Profile"
           />
           <img
             className="absolute rounded-t-lg inset-0 h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Banner"
           />
         </div>
         <div className="flex flex-row justify-end gap-4 px-6 py-4">
@@ -80,6 +83,7 @@ export default function LIProfileCard() {
             <img
               src="https://w7.pngwing.com/pngs/276/472/png-transparent-linkedin-computer-icons-blog-logo-watercolor-butterfly-angle-text-rectangle.png"
               className="object-cover h-6 w-6"
+              alt="LinkedIn logo"
             />
           </a>
           <a
@@ -89,6 +93,7 @@ export default function LIProfileCard() {
             <img
               src="https://static-00.iconduck.com/assets.00/github-square-icon-511x512-080fj8cx.png"
               className="object-cover h-6 w-6"
+              alt="GitHub logo"
             />
           </a>
         </div>
@@ -137,7 +142,7 @@ const OrgIntroList = ({
         (org) =>
           org.type === "Profile" && (
             <OrgIntroRow orgName={org.orgName} orgImgSrc={org.orgImgSrc} />
-          ),
+          )
       )}
     </div>
   );

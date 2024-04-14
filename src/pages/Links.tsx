@@ -32,6 +32,7 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
           <img
             src="https://ugc.production.linktr.ee/ddc804dd-1aaf-4112-ac50-9befe32ddc85_Screenshot-2024-04-04-09-26-57-02-99c04817c0de5652397fc8b56c3b3817.jpeg?io=true&size=avatar-v3_0"
             className="rounded-full bg-cover h-28 w-28 shadow-lg m-2"
+            alt="Profile"
           />
           <h2 className="pt-2 text-gray-900 font-bold text-xl">Looi Wei En</h2>
           <h2 className="text-gray-900 font-normal text-lg italic">
