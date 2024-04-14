@@ -3,24 +3,46 @@ interface LinkProps {}
 
 const Links: React.FunctionComponent<LinkProps> = (props) => {
   return (
-    <div className="relative flex flex-col h-screen w-screen justify-center align-middle  bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover">
-      <div className="absolute inset-0 bg-white bg-opacity-80"></div>
+    <div className="relative flex flex-col h-screen w-screen justify-center align-middle bg-fixed bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover">
+      <div className="absolute inset-0 bg-gray-100 bg-opacity-85"></div>
+      <a
+        href="/weienlooi"
+        className="absolute z-20 top-4 right-4 cursor-pointer p-3 rounded-full bg-white hover:bg-opacity-70 text-sm"
+      >
+        <svg
+          className="w-4 h-4 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"
+          />
+        </svg>
+      </a>
       <div className="absolute z-10 inset-0 w-screen flex flex-col  justify-center align-middle items-center">
-        <div className="flex flex-col max-w-108 min-w-96 p-8 items-center">
+        <div className="flex flex-col max-w-108 min-w-92 p-8 items-center">
           <img
             src="https://ugc.production.linktr.ee/ddc804dd-1aaf-4112-ac50-9befe32ddc85_Screenshot-2024-04-04-09-26-57-02-99c04817c0de5652397fc8b56c3b3817.jpeg?io=true&size=avatar-v3_0"
-            className="rounded-full bg-cover h-24 w-24 shadow-lg m-2"
+            className="rounded-full bg-cover h-28 w-28 shadow-lg m-2"
           />
-          <h2 className="p-1 text-gray-900 font-bold text-xl">Looi Wei En</h2>
-          <h2 className="text-gray-700 font-semibold text-lg italic">
+          <h2 className="pt-2 text-gray-900 font-bold text-xl">Looi Wei En</h2>
+          <h2 className="text-gray-900 font-normal text-lg italic">
             @diminecjean
           </h2>
           {/* soc med icons */}
-          <div className="my-2 px-12 grid grid-cols-5 w-full mx-auto items-center justify-center gap-4">
+          <div className="my-4 px-16 md:px-20 grid grid-cols-5 w-full mx-auto items-center justify-center gap-4">
             {/*facebook*/}
             <div className="col-span-1">
               <a href="https://www.facebook.com/weien.looi">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="28" height="28" viewBox="0 0 28 28">
                   <path d="M23,12A11,11,0,1,0,10.279,22.865h0a11.08,11.08,0,0,0,3.436,0h0A10.952,10.952,0,0,0,23,12ZM10.859,21.935v-6.9a.5.5,0,0,0-.5-.5H8.193V12.5h2.166a.5.5,0,0,0,.5-.5V9.686c0-2.278,1.264-3.585,3.459-3.585a15.392,15.392,0,0,1,1.858.137V7.89h-.824l-.019,0a2,2,0,0,0-2.181,1.735,1.8,1.8,0,0,0-.011.4V12a.5.5,0,0,0,.5.5H15.97l-.312,2.035H13.641a.5.5,0,0,0-.5.5v6.9A10.124,10.124,0,0,1,10.859,21.935Zm3.282-.166V15.535h1.946a.5.5,0,0,0,.5-.425l.465-3.035a.5.5,0,0,0-.494-.575H14.141V10.016a1.267,1.267,0,0,1,.308-.821,1.218,1.218,0,0,1,.9-.3h1.324a.5.5,0,0,0,.5-.5V5.806a.5.5,0,0,0-.42-.494A16.661,16.661,0,0,0,14.325,5.1c-2.754,0-4.466,1.757-4.466,4.585V11.5H7.693a.5.5,0,0,0-.5.5v3.035a.5.5,0,0,0,.5.5H9.859v6.234a10,10,0,1,1,4.282,0Z"></path>
                 </svg>
               </a>
@@ -28,7 +50,7 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
             {/*email*/}
             <div className="col-span-1">
               <a href="mailto:looi.weien02@gmail.com">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="28" height="28" viewBox="0 0 28 28">
                   <title data-testid="svgTitle" id="title_0.6199260049709951">
                     Email
                   </title>
@@ -42,7 +64,7 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
             {/*instagram*/}
             <div className="col-span-1">
               <a href="https://instagram.com/diminecjean2002">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="28" height="28" viewBox="0 0 28 28">
                   <title data-testid="svgTitle" id="title_0.7333420262385255">
                     Instagram
                   </title>
@@ -55,7 +77,7 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
             {/*github*/}
             <div className="col-span-1">
               <a href="https://github.com/diminecjean">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="28" height="28" viewBox="0 0 28 28">
                   <title data-testid="svgTitle" id="title_0.11974885857667905">
                     GitHub
                   </title>
@@ -66,7 +88,7 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
             {/*linkedin*/}
             <div className="col-span-1">
               <a href="https://www.linkedin.com/in/looi-wei-en/">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="28" height="28" viewBox="0 0 28 28">
                   <title data-testid="svgTitle" id="title_0.06607922443312475">
                     LinkedIn
                   </title>
@@ -78,137 +100,43 @@ const Links: React.FunctionComponent<LinkProps> = (props) => {
             </div>
           </div>
           <div className="grid grid-cols-1 w-full gap-2 my-2">
-            <div className="relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-2 px-4 cursor-pointer">
+            <div className="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:bg-opacity-100 duration-200 relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-3 px-4 cursor-pointer">
               <a
                 href="https://www.instagram.com/gdgcloudkl"
-                className="text-lg p-1 font-semibold text-gray-800"
+                className="text-sm p-1 font-semibold text-gray-800"
               >
                 GDG Cloud KL
               </a>
-              <button
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    "https://www.instagram.com/gdgcloudkl"
-                  )
-                }
-                className="absolute z-10 right-2 inset-y-2"
-              >
-                <svg
-                  className="w-6 h-6 text-gray-600 hover:text-gray-900 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
-                  />
-                </svg>
-              </button>
             </div>
-            <div className="relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-2 px-4 cursor-pointer">
+          </div>
+          <div className="grid grid-cols-1 w-full gap-2 my-2">
+            <div className="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:bg-opacity-100 duration-200 relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-3 px-4 cursor-pointer">
               <a
-                href="https://www.instagram.com/gdgcloudkl"
-                className="text-lg p-1 font-semibold text-gray-800"
+                href="https://gdg.community.dev/events/details/google-gdg-cloud-kl-presents-build-with-ai-kuala-lumpur-amp-gcpboleh-ai-studyjam-2024/cohost-gdg-cloud-kl"
+                className="text-sm p-1 font-semibold text-gray-800"
               >
-                GDG Cloud KL
+                Build with AI & #GCPBoleh Kickoff
               </a>
-              <button
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    "https://www.instagram.com/gdgcloudkl"
-                  )
-                }
-                className="absolute z-10 right-2 inset-y-2"
-              >
-                <svg
-                  className="w-6 h-6 text-gray-600 hover:text-gray-900 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
-                  />
-                </svg>
-              </button>
             </div>
-            <div className="relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-2 px-4 cursor-pointer">
+          </div>
+          <div className="grid grid-cols-1 w-full gap-2 my-2">
+            <div className="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:bg-opacity-100 duration-200 relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-3 px-4 cursor-pointer">
               <a
-                href="https://www.instagram.com/gdgcloudkl"
-                className="text-lg p-1 font-semibold text-gray-800"
+                href="http://goo.gle/GCPBolehS6"
+                className="text-sm p-1 font-semibold text-gray-800"
               >
-                GDG Cloud KL
+                GCPBoleh S6
               </a>
-              <button
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    "https://www.instagram.com/gdgcloudkl"
-                  )
-                }
-                className="absolute z-10 right-2 inset-y-2"
-              >
-                <svg
-                  className="w-6 h-6 text-gray-600 hover:text-gray-900 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
-                  />
-                </svg>
-              </button>
             </div>
-            <div className="relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-2 px-4 cursor-pointer">
+          </div>
+          <div className="grid grid-cols-1 w-full gap-2 my-2">
+            <div className="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:bg-opacity-100 duration-200 relative rounded-md w-full shadow-lg bg-white bg-opacity-80 py-3 px-4 cursor-pointer">
               <a
-                href="https://www.instagram.com/gdgcloudkl"
-                className="text-lg p-1 font-semibold text-gray-800"
+                href="https://open.spotify.com/user/2mxbue3d9g83o6w2rqi8xydj3?si=9ca436f318fc4ab8"
+                className="text-sm p-1 font-semibold text-gray-800"
               >
-                GDG Cloud KL
+                Spotify
               </a>
-              <button
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    "https://www.instagram.com/gdgcloudkl"
-                  )
-                }
-                className="absolute z-10 right-2 inset-y-2"
-              >
-                <svg
-                  className="w-6 h-6 text-gray-600 hover:text-gray-900 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
