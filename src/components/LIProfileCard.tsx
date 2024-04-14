@@ -142,7 +142,7 @@ const OrgIntroList = ({
         (org) =>
           org.type === "Profile" && (
             <OrgIntroRow orgName={org.orgName} orgImgSrc={org.orgImgSrc} />
-          )
+          ),
       )}
     </div>
   );
