@@ -29,8 +29,31 @@ const ContactModal = ({
   );
 };
 
+const ImageModal = ({
+  openImage,
+  closeImage,
+}: {
+  openImage: boolean;
+  closeImage: () => void;
+}) => {
+  return (
+    <div
+      className={`${
+        openImage ? "fixed" : "hidden"
+      } inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center`}
+      onClick={closeImage}
+    >
+      <img
+        className="max-w-xl max-h-80 md:max-w-3xl md:max-h-96 rounded-full shadow-2xl"
+        src="https://scontent.fkul15-1.fna.fbcdn.net/v/t39.30808-6/361335771_2060895927621943_5044660452564970401_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=t_UMT6mXSxEAb5KjTlv&_nc_ht=scontent.fkul15-1.fna&oh=00_AfAM6dX4ip1FnmPWg20CnU6KUmUjFOEbmyea5aOw80DfbA&oe=66207149"
+      />
+    </div>
+  );
+};
+
 export default function LIProfileCard() {
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openImage, setOpenImage] = useState<boolean>(false);
   const modalController = () => {
     setOpenModal(!openModal);
   };
@@ -40,8 +63,9 @@ export default function LIProfileCard() {
       <div className="w-full relative rounded-lg bg-white dark:bg-sky-800 flex flex-col gap-0 overflow-hidden border-2 border-gray-200 shadow-sm">
         <div className="relative isolate flex flex-col justify-end rounded-2xl px-8 pb-12 pt-36 w-full">
           <img
-            className="absolute z-40 rounded-full top-20 left-8 h-40 w-40 object-cover border-white border-4"
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            onClick={() => setOpenImage(true)}
+            className="hover:cursor-pointer absolute z-40 rounded-full top-20 left-8 h-40 w-40 object-cover border-white border-4"
+            src="https://scontent.fkul15-1.fna.fbcdn.net/v/t39.30808-6/361335771_2060895927621943_5044660452564970401_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=t_UMT6mXSxEAb5KjTlv&_nc_ht=scontent.fkul15-1.fna&oh=00_AfAM6dX4ip1FnmPWg20CnU6KUmUjFOEbmyea5aOw80DfbA&oe=66207149"
           />
           <img
             className="absolute rounded-t-lg inset-0 h-full w-full object-cover"
@@ -77,7 +101,7 @@ export default function LIProfileCard() {
                 Major from USM
               </h2>
               <p className="pt-2 font-normal text-gray-500 text-sm">
-                Penang, Malaysia ·{" "}
+                Penang, Malaysia ·
                 <span
                   itemType="button"
                   onClick={modalController}
@@ -94,6 +118,10 @@ export default function LIProfileCard() {
         </div>
       </div>
       <ContactModal openModal={openModal} closeModal={modalController} />
+      <ImageModal
+        openImage={openImage}
+        closeImage={() => setOpenImage(false)}
+      />
     </>
   );
 }
@@ -101,13 +129,16 @@ export default function LIProfileCard() {
 const OrgIntroList = ({
   orgData,
 }: {
-  orgData: { orgName: string; orgImgSrc: string }[];
+  orgData: { type: string; orgName: string; orgImgSrc: string }[];
 }) => {
   return (
     <div className="flex flex-col gap-2">
-      {orgData.map((org) => (
-        <OrgIntroRow orgName={org.orgName} orgImgSrc={org.orgImgSrc} />
-      ))}
+      {orgData.map(
+        (org) =>
+          org.type === "Profile" && (
+            <OrgIntroRow orgName={org.orgName} orgImgSrc={org.orgImgSrc} />
+          )
+      )}
     </div>
   );
 };
