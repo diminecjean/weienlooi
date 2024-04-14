@@ -102,7 +102,7 @@ export default function List({
               />
               {index !== orgData.length - 1 && <hr className="my-2" />}
             </div>
-          )
+          ),
       )}
     </div>
   );

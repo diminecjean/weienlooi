@@ -5,8 +5,8 @@ import Flickity from "react-flickity-component";
 import "./flickity.css";
 
 const flickityOptions = {
-    initialIndex: 2
-}
+  initialIndex: 2,
+};
 
 type CarouselProps = {
   title: string;
@@ -17,8 +17,8 @@ type CarouselProps = {
 function Carousel({ title, description, image }: CarouselProps) {
   return (
     <Flickity
-      className={'carousel'} // default ''
-      elementType={'div'} // default 'div'
+      className={"carousel"} // default ''
+      elementType={"div"} // default 'div'
       options={flickityOptions} // takes flickity options {}
       disableImagesLoaded={false} // default false
       reloadOnUpdate // default false

@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
 on:
- push:
-   branches:
-    - main
-   paths-ignore:
-    - '**.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
 
 jobs:
   deployment:
@@ -15,21 +15,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-            node-version: '20'
+          node-version: "20"
       - name: Setup Yarn
         run: npm i -g yarn
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-            ref: ${{ github.event.push.head.ref}}
-            token: ${{ secrets.GITHUB_TOKEN}}
-            fetch-depth: 1
+          ref: ${{ github.event.push.head.ref}}
+          token: ${{ secrets.GITHUB_TOKEN}}
+          fetch-depth: 1
       - name: Install Dependencies
         run: yarn
       - name: TypeScript Type Check
         run: yarn tsc
       - name: Prettier check
         run: yarn prettier --ignore-unknown --no-error-on-unmatched-pattern --color --check .
-      - name: Build and Deploy 
+      - name: Build and Deploy
         run: yarn deploy
-  

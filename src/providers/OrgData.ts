@@ -37,8 +37,7 @@ export const orgData = [
     location: "Kuala Lumpur, Malaysia",
     description: "",
     skills: "React Native, TypeScript, CI/CD, Git, Jira",
-    type: 
-    "Work",
+    type: "Work",
   },
   {
     orgName: "MoneyLion",
