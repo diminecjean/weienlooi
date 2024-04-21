@@ -84,26 +84,25 @@ export default function List({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      {orgData.map(
-        (org, index) =>
-          org.type === type && (
-            <div key={org.orgName}>
-              <ListRow
-                orgName={org.orgName}
-                orgImgSrc={org.orgImgSrc}
-                role={org.role}
-                workType={org.workType}
-                date={org.date}
-                duration={org.duration}
-                mode={org.mode}
-                location={org.location}
-                description={org.description}
-                skills={org.skills}
-              />
-              {index !== orgData.length - 1 && <hr className="my-2" />}
-            </div>
-          ),
-      )}
+      {orgData
+        .filter((org) => org.type === type)
+        .map((org, index, filteredArray) => (
+          <div key={org.orgName}>
+            <ListRow
+              orgName={org.orgName}
+              orgImgSrc={org.orgImgSrc}
+              role={org.role}
+              workType={org.workType}
+              date={org.date}
+              duration={org.duration}
+              mode={org.mode}
+              location={org.location}
+              description={org.description}
+              skills={org.skills}
+            />
+            {index !== filteredArray.length - 1 && <hr className="my-2" />}
+          </div>
+        ))}
     </div>
   );
 }
