@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weienlooi/static/css/main.797196f8.css",
-    "main.js": "/weienlooi/static/js/main.786cc2f3.js",
+    "main.css": "/weienlooi/static/css/main.f2d32204.css",
+    "main.js": "/weienlooi/static/js/main.1d11d49e.js",
     "static/js/592.83033f49.chunk.js": "/weienlooi/static/js/592.83033f49.chunk.js",
     "index.html": "/weienlooi/index.html",
-    "main.797196f8.css.map": "/weienlooi/static/css/main.797196f8.css.map",
-    "main.786cc2f3.js.map": "/weienlooi/static/js/main.786cc2f3.js.map",
+    "main.f2d32204.css.map": "/weienlooi/static/css/main.f2d32204.css.map",
+    "main.1d11d49e.js.map": "/weienlooi/static/js/main.1d11d49e.js.map",
     "592.83033f49.chunk.js.map": "/weienlooi/static/js/592.83033f49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.797196f8.css",
-    "static/js/main.786cc2f3.js"
+    "static/css/main.f2d32204.css",
+    "static/js/main.1d11d49e.js"
   ]
 }
