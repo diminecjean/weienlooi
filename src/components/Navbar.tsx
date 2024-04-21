@@ -1,15 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>("");
+
+  useEffect(() => {
+    setActiveTab(window.location.pathname);
+  }, []);
+
+  const tabs = [
+    {
+      link: "/weienlooi",
+      name: "Looi Wei En",
+    },
+    {
+      link: "/weienlooi/projects",
+      name: "Projects",
+    },
+    {
+      link: "/weienlooi/gallery",
+      name: "Gallery",
+    },
+    {
+      link: "/weienlooi/links",
+      name: "Contact Me",
+    },
+  ];
 
   return (
-    <nav className="fixed w-full z-50 top-0 bg-white border-gray-200 dark:bg-gray-900 shadow-lg">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-4 p-1">
-        <div className="hidden md:block font-semibold text-md dark:text-white">
-          <p>Looi Wei En</p>
-        </div>
+    <nav className="fixed w-full z-50 top-0 bg-[rgba(255,255,255,0)] border-gray-200 dark:bg-gray-900">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-4 p-3">
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
@@ -32,35 +53,20 @@ export default function Navbar() {
           } md:flex`}
           id="navbar-default"
         >
-          <ul className="font-medium text-xs flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a
-                href="/weienlooi"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#0485CE] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                aria-current="page"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="/weienlooi"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#0485CE] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a
-                href="/weienlooi/links"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#0485CE] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact Me
-              </a>
-            </li>
+          <ul className="font-medium text-xs flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            {tabs.map((tab) => (
+              <li key={tab.link}>
+                <a
+                  href={tab.link}
+                  className={`block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-[#7fd6fc] md:hover:shadow-[0_2px_0px_0_rgb(127,206,252,0.8)] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${tab.link === activeTab ? "text-[#7fcefc] shadow-[0_2px_0px_0_rgb(127,206,252,0.8)]" : "text-white "}`}
+                >
+                  <p className="drop-shadow-md text-semibold">{tab.name}</p>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
       </div>
     </nav>
   );
