@@ -14,15 +14,31 @@ const ContactModal = ({
         openModal ? "block" : "hidden"
       } fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center`}
     >
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-8">
-        <h1 className="text-2xl font-semibold">Contact Information</h1>
+      <div className="relative text-left bg-white dark:bg-gray-800 w-64 rounded-lg py-4 px-8">
+        <h1 className="text-xl font-semibold pb-4">Find me @</h1>
         <p className="text-gray-500">Email:</p>
         <p className="text-gray-500">Phone:</p>
         <button
           onClick={closeModal}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          className="absolute top-4 right-4 hover:cursor-pointer"
         >
-          Close
+          <svg
+            className="w-5 h-5 text-gray-500 hover:text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
         </button>
       </div>
     </div>
@@ -61,7 +77,7 @@ export default function LIProfileCard() {
 
   return (
     <>
-      <div className="w-full relative rounded-lg bg-white dark:bg-sky-800 flex flex-col gap-0 overflow-hidden border-2 border-gray-200 shadow-sm">
+      <div className="w-full relative rounded-lg bg-white dark:bg-sky-800 flex flex-col gap-0 overflow-hidden shadow-lg hover:shadow-cyan-300/50 hover:ring-2 hover:ring-cyan-300">
         <div className="relative isolate flex flex-col justify-end rounded-2xl px-8 pb-12 pt-36 w-full">
           <img
             onClick={() => setOpenImage(true)}
@@ -142,7 +158,7 @@ const OrgIntroList = ({
         (org) =>
           org.type === "Profile" && (
             <OrgIntroRow orgName={org.orgName} orgImgSrc={org.orgImgSrc} />
-          ),
+          )
       )}
     </div>
   );

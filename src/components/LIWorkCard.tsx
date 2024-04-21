@@ -3,7 +3,7 @@ import List from "./List";
 
 export default function LIWorkCard() {
   return (
-    <div className="w-full relative rounded-lg bg-white dark:bg-sky-800 flex flex-col gap-0 overflow-hidden border-2 border-gray-200 shadow-sm">
+    <div className="w-full relative rounded-lg bg-white dark:bg-sky-800 flex flex-col gap-0 overflow-hidden shadow-lg hover:shadow-cyan-300/50 hover:ring-2 hover:ring-cyan-300">
       <div className="relative isolate flex flex-col justify-end rounded-2xl px-8 py-6 w-full text-left">
         <h2 className="font-semibold text-xl mb-4">Work</h2>
         <List
